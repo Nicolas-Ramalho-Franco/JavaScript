@@ -15,12 +15,15 @@ btn.addEventListener("click",function clicar(){
     let texto = input.value
     filmes.push(texto)
     input.value = ""
+    renderizar()
 })
 
 // Read
 function renderizar(){
+    listaFilmes.innerHTML=""
+
     filmes.forEach(function pegafilme(elementoAtual,indice){
-       
+
         let itemLista = document.createElement("li") // isso esta criando um botão conforme vai adicionando o texto 
         itemLista.textContent = elementoAtual
         listaFilmes.append(itemLista) // ele adiciona uma tag na outra
